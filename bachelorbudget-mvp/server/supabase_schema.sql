@@ -215,3 +215,4 @@ CREATE TABLE IF NOT EXISTS csv_import_batches (
   row_count INTEGER NOT NULL,
   imported_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
