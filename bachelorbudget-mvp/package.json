@@ -1,0 +1,24 @@
+{
+  "name": "bachelorbudget-mvp",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client && npm run build -w server",
+    "test": "npm run test -w server",
+    "start": "npm run start -w server",
+    "kill:ports": "powershell -Command \"Stop-Process -Id (Get-NetTCPConnection -LocalPort 4000,5173 -ErrorAction SilentlyContinue).OwningProcess -Force -ErrorAction SilentlyContinue\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "allowScripts": {
+    "better-sqlite3@11.10.0": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true
+  }
+}

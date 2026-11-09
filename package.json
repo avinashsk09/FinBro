@@ -1,0 +1,13 @@
+{
+  "name": "bachelorbudget-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm run dev --prefix bachelorbudget-mvp",
+    "build": "npm run build --prefix bachelorbudget-mvp",
+    "test": "npm run test --prefix bachelorbudget-mvp",
+    "start": "npm run start --prefix bachelorbudget-mvp",
+    "kill:ports": "powershell -Command \"Stop-Process -Id (Get-NetTCPConnection -LocalPort 4000,5173 -ErrorAction SilentlyContinue).OwningProcess -Force -ErrorAction SilentlyContinue\""
+  }
+}
+
